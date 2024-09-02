@@ -1,6 +1,6 @@
 ---
 name: Bunny Launcher
-description: Deploy your websites to bunny.net using Bunny Launcher and GitHub Actions
+description: Deploy your websites to bunny.net using Bunny Launcher and GitHub Actions 🐰
 author: Bunny Launcher
 branding:
   color: orange
