@@ -1,0 +1,52 @@
+---
+name: Bunny Launcher
+description: Deploy your websites to bunny.net using Bunny Launcher and GitHub Actions
+author: Bunny Launcher
+branding:
+  color: orange
+  icon: upload
+
+inputs:
+  accessKey:
+    description: Your bunny.net account API Access Key
+    required: true
+  command:
+    default: deploy
+    description: Deploy or remove your website
+    options:
+      - deploy
+      - remove
+    required: true
+    type: choice
+  flags:
+    default: ""
+    description: Flags to append to the Bunny Launcher deploy command
+  stage:
+    description: The name of the environment you are deploying to (e.g. production, staging, development, etc.)
+    required: true
+  version:
+    default: ""
+    description: The version of Bunny Launcher to install and use
+
+runs:
+  using: composite
+  steps:
+    - if: version != ""
+      env:
+        BUNNY_ACCESS_KEY: ${{ inputs.accessKey }}
+        BUNNY_LAUNCHER_STAGE: ${{ inputs.stage }}
+        COMMAND: ${{ inputs.command }}
+        FLAGS: ${{ inputs.flags }}
+        VERSION: ${{ inputs.version }}
+      run: npx --yes "bunny-launcher@$version" "$COMMAND" $FLAGS
+      shell: bash
+
+    - if: version == ""
+      env:
+        BUNNY_ACCESS_KEY: ${{ inputs.accessKey }}
+        BUNNY_LAUNCHER_STAGE: ${{ inputs.stage }}
+        COMMAND: ${{ inputs.command }}
+        FLAGS: ${{ inputs.flags }}
+        VERSION: ${{ inputs.version }}
+      run: npx --yes bunny-launcher "$COMMAND" $FLAGS
+      shell: bash
