@@ -19,3 +19,5 @@ steps:
 ## Documentation
 
 Please read the [docs](https://bunny-launcher.net/github-action/) for usage and examples.
+
+Please read the [action.yml](https://github.com/jlarmstrongiv/bunny-launcher-github-action/blob/main/action.yml) for options.
