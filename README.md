@@ -1,6 +1,6 @@
 # bunny-sdk
 
-[![GitHub Release](https://img.shields.io/github/v/release/jlarmstrongiv/bunny-sdk-github-action)](https://github.com/jlarmstrongiv/bunny-sdk-github-action)
+[![GitHub Release](https://img.shields.io/github/v/release/jlarmstrongiv/bunny-launcher-github-action)](https://github.com/jlarmstrongiv/bunny-launcher-github-action)
 
 ## Documentation
 
