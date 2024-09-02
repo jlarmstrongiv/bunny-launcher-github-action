@@ -10,7 +10,8 @@ steps:
   - uses: actions/setup-node@v4
     with:
       node-version: lts
-  - uses: jlarmstrongiv/bunny-launcher-github-action@latest
+  # Use a specific version if locking is preferred
+  - uses: jlarmstrongiv/bunny-launcher-github-action@main
     with:
       accessKey: ${{ secrets.BUNNY_ACCESS_KEY }}
 ```
