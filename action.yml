@@ -2,6 +2,7 @@
 name: Bunny Launcher
 description: Deploy your websites to bunny.net using Bunny Launcher and GitHub Actions 🐰
 author: Bunny Launcher
+# branding https://github.com/haya14busa/github-action-brandings
 branding:
   color: orange
   icon: upload
@@ -10,6 +11,7 @@ inputs:
   accessKey:
     description: Your bunny.net account API Access Key
     required: true
+  # enum input https://stackoverflow.com/a/73065956
   command:
     default: deploy
     description: Deploy or remove your website

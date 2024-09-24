@@ -1,5 +1,7 @@
 # Contributing
 
+<!-- publishing https://docs.github.com/en/actions/sharing-automations/creating-actions/publishing-actions-in-github-marketplace -->
+
 - `git add -A`
 - `git commit -m "message"`
 - `git push`

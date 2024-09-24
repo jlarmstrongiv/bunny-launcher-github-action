@@ -4,6 +4,8 @@
 
 ## Installation
 
+<!-- GitHub Actions latest version https://stackoverflow.com/a/73259281 -->
+
 ```yml
 steps:
   - uses: actions/checkout@v4
